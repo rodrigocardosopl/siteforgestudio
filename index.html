@@ -9,9 +9,17 @@
   <meta property="og:description" content="Forge Studio | Design estratégico que gera resultados" />
   <link rel="icon" type="image/avif" href="fav.avif" />
   <link rel="shortcut icon" href="fav.avif" />
+  <!-- Preconnect para reduzir latência DNS/TLS -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Carregamento assíncrono — não bloqueia renderização -->
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" />
+  </noscript>
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -26,7 +34,7 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
       background: #0a1a17;
       display: flex;
       align-items: center;
@@ -67,7 +75,7 @@
     }
 
     .logo svg {
-      height: clamp(56px, 10vw, 110px);
+      height: clamp(80px, 10vw, 110px);
       width: auto;
       filter: drop-shadow(0 0 40px rgba(11, 241, 195, 0.25));
     }
@@ -84,7 +92,7 @@
       border-radius: 100px;
       padding: 9px 20px 9px 16px;
       color: #F5F4F0;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', system-ui, sans-serif;
       font-size: 14px;
       font-weight: 400;
       letter-spacing: 0.01em;
@@ -133,7 +141,7 @@
     }
 
     .cta-text {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', system-ui, sans-serif;
       font-size: clamp(13px, 1.8vw, 15px);
       font-weight: 400;
       color: rgba(245, 244, 240, 0.82);
@@ -152,7 +160,7 @@
       gap: 8px;
       background: #0BF1C3;
       color: #080808;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', system-ui, sans-serif;
       font-size: 17px;
       font-weight: 700;
       white-space: nowrap;
@@ -206,7 +214,7 @@
       right: 0;
       text-align: center;
       padding: 20px 24px;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', system-ui, sans-serif;
       font-size: 13px;
       color: rgba(245, 244, 240, 0.45);
       z-index: 2;
