@@ -387,6 +387,7 @@
         badge:       'Site em construção.',
         ctaText:     'Mas para <strong>agilizar seu atendimento,</strong> entre em contato com a gente clicando no botão:',
         btnLabel:    'Quero solicitar um orçamento',
+        btnHref:     'https://wa.me/5522981714010?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20o%20meu%20projeto',
         footer:      'Copyright &copy; 2026 Beforge Studio. <strong>Todos os direitos reservados.</strong>',
       },
       en: {
@@ -396,6 +397,7 @@
         badge:       'Website under construction.',
         ctaText:     'But to speed up your service, <strong>get in touch with us</strong> by clicking the button below:',
         btnLabel:    'Get in touch',
+        btnHref:     'https://wa.me/5522981714010?text=Hi%2C%20I\'d%20like%20to%20request%20a%20quote%20for%20my%20project.',
         footer:      'Copyright &copy; 2026 Beforge Studio. <strong>All rights reserved.</strong>',
       }
     };
@@ -410,6 +412,7 @@
       document.getElementById('badge-text').textContent = t.badge;
       document.getElementById('cta-text').innerHTML     = t.ctaText;
       document.getElementById('btn-label').textContent  = t.btnLabel;
+      document.getElementById('cta-btn').href           = t.btnHref;
       document.getElementById('footer-text').innerHTML  = t.footer;
 
       document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
